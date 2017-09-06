@@ -11,6 +11,9 @@ set expandtab
 set shiftwidth=4
 " tabキーを押した時の幅をスペース２つ文にする
 set tabstop=2
+syntax on 
+colorscheme molokai
+set t_Co=256
 
 """"""""""""""""""""""""""""""
 " プラグインのセットアップ
