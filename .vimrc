@@ -28,7 +28,18 @@ endif
   " Let NeoBundle manage NeoBundle
   " " Required:
   NeoBundleFetch 'Shougo/neobundle.vim'
+  " この下に欲しいプラグインを記述する
+  
+  " ファイルの構文エラーをチェックする
   NeoBundle 'scrooloose/syntastic'
+  " Vimを起動しながらファイルやディレクトリを開くことができる
+  NeoBundle 'scrooloose/nerdtree'
+
+  "様々なデータを簡単に操作できるようになる 
+  NeoBundle 'Shougo/unite.vim'
+
+  " テキストのフォーマットに応じてカラースキーマを適用してくれる
+  NeoBundle 'tomasr/molokai'
 call neobundle#end()
 
 " Required:
