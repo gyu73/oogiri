@@ -7,10 +7,13 @@ set number
 set autoindent
 " tabを半角スペースで挿入する
 set expandtab
+" マウスでコピーアンドペーストできる
+set mouse=a
 " Vimが自動で生成するインデントの幅をスペース4つ分にする
 set shiftwidth=4
 " tabキーを押した時の幅をスペース２つ文にする
 set tabstop=2
+" 色をつける
 syntax on 
 colorscheme molokai
 set t_Co=256
