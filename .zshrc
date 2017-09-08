@@ -13,9 +13,9 @@
   }
 
 : "ヒストリ関連の設定" && {
-  HISTFILE=$HOME/.zsh_history # ヒストリファイル名
-  HISTSIZE=10000 # メモリに保存される履歴の件数
-  SAVEHIST=10000 # 履歴ファイルに保存される履歴の件数
+  export HISTFILE=$HOME/.zsh_history # ヒストリファイル名
+  export HISTSIZE=10000 # メモリに保存される履歴の件数
+  export SAVEHIST=10000 # 履歴ファイルに保存される履歴の件数
   setopt hist_ignore_dups # 直前と同じコマンドをヒストリに追加しない
   setopt hist_ignore_all_dups # 重複するコマンドは古い法を削除する
   setopt share_history # 異なるウィンドウでコマンドヒストリを共有する
