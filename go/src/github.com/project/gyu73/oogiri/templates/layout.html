@@ -1,0 +1,83 @@
+{{ define "head" }}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ .title }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .gallery-title
+        {
+            font-size: 36px;
+            color: #42B32F;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 70px;
+        }
+        .gallery-title:after {
+            content: "";
+            position: absolute;
+            width: 7.5%;
+            left: 46.5%;
+            height: 45px;
+            border-bottom: 1px solid #5e5e5e;
+        }
+        .filter-button
+        {
+            font-size: 18px;
+            border: 1px solid #42B32F;
+            border-radius: 5px;
+            text-align: center;
+            color: #42B32F;
+            margin-bottom: 30px;
+
+        }
+        .filter-button:hover
+        {
+            font-size: 18px;
+            border: 1px solid #42B32F;
+            border-radius: 5px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #42B32F;
+
+        }
+        .btn-default:active .filter-button:active
+        {
+            background-color: #42B32F;
+            color: white;
+        }
+
+        .port-image
+        {
+            width: 100%;
+        }
+
+        .gallery_product
+        {
+            margin-bottom: 30px;
+        }
+
+    </style>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+{{end}}
+
+{{ define "header" }}
+<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1 class="gallery-title">
+        <a href="/">みんなで大喜利</a></h1>
+</div>
+{{ end }}
+
+
+{{ define "footer" }}
+<footer>
+    <p>wiki created by <a href="https://github.com/suzuken">@suzuken</a></p>
+</footer>
+{{end}}

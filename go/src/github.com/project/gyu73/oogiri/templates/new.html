@@ -1,0 +1,17 @@
+{{define "new"}}
+<!DOCTYPE html>
+<html lang="en">
+<body style="background-color:lightyellow;">
+{{ template "header" . }}
+<div align="center">
+    <a href="/user/1" class="btn btn-default filter-button" data-filter="all">マイページ</a>
+</div>
+<h2>投稿する</h2>
+<form action="/oogiri" method="post">
+    <input type="text" name="title" placeholder="Title">
+    <textarea name="image" placeholder="Image URL"></textarea>
+    <button type="submit" value="Submit"></button>
+</form>
+</body>
+</html>
+{{end}}

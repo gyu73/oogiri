@@ -1,0 +1,4 @@
+development:
+  dialect: mysql
+  datasource: root:@tcp(localhost:3306)/oogiri?parseTime=true&collation=utf8_general_ci&interpolateParams=true
+  dir: migrations

@@ -1,0 +1,25 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" . }}
+<body style="background-color:lightyellow;">
+{{ template "header" . }}
+<div align="center">
+    <a href="/oogiri/new" class="btn btn-default filter-button" data-filter="all">投稿する</a>
+    <a href="/user/1" class="btn btn-default filter-button" data-filter="all">マイページ</a>
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        {{range .oogiris}}
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+            <img src="{{.Image}}" class="img-responsive">
+            <a href="/oogiri/{{.ID}}">{{.Title}}</a>
+        </div>
+        {{end}}
+    </div>
+</div>
+
+</body>
+</html>
+{{end}}

@@ -1,0 +1,37 @@
+{{define "show"}}
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" . }}
+<body style="background-color:lightyellow;">
+{{ template "header" . }}
+<div align="center">
+    <a href="/oogiri/new" class="btn btn-default filter-button" data-filter="all">投稿する</a>
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        {{range .oogiri}}
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+            <img src="{{.Image}}" class="img-responsive">
+            <a href="/oogiri/{{.ID}}">{{.Title}}</a>
+            <form action="/oogiri/{{.ID}}/delete" method="POST">
+                <button type="submit" VALUE="削除"></button>
+                <input type="hidden" name="oogiri_id" value="{{.ID}}">
+        </div>
+    </div>
+</div>
+<form action="/oogiri/answer" method="post">
+    <input type="text" name="answer_body"></input>
+    <button type="submit" value="submit"></button>
+    <input type="hidden" name="oogiri_id" value="{{.ID}}"></input>
+</form>
+{{end}}
+<h1>コメント一覧</h1>
+{{range .answers}}
+<div>
+{{.Body}}
+</div>
+{{end}}
+</body>
+</html>
+{{end}}
